@@ -1,7 +1,7 @@
 pjax-rails-example
 ==================
 
-This is a simple, working implementation of Pjax on a vanilla rails app. Based off of Chris Wanstrath's [PJAX](https://github.com/defunkt/jquery-pjax)
+This is a simple, working implementation of Pjax on a vanilla rails app. Based off of Chris Wanstrath's [PJAX](https://github.com/defunkt/jquery-pjax) just include the jquery.pjax.js file in your pipeline and start coding.
 
 ERB
 ```html
@@ -52,3 +52,5 @@ class BookController < ApplicationController
 
 end
 ```
+
+for more great reading checkout https://github.com/defunkt/jquery-pjax
