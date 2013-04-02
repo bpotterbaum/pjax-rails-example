@@ -53,4 +53,4 @@ class BookController < ApplicationController
 end
 ```
 
-for more great reading checkout https://github.com/defunkt/jquery-pjax
+For more info checkout https://github.com/defunkt/jquery-pjax
