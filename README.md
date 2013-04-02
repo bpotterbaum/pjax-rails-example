@@ -5,26 +5,33 @@ This is a simple, working implementation of Pjax on a vanilla rails app. Based o
 
 
 JS
-		<script type="text/javascript">
-			$(document).pjax('a[data-pjax]', '[data-pjax-container]')
-		</script>
-
+```erb
+<script type="text/javascript">
+	$(document).pjax('a[data-pjax]', '[data-pjax-container]')
+</script>
+```
 
 ERB
-		<body>
-		    <h2>Cat In The Hat</h2>
-		    <p>To show the page is not reloading: <%= Time.now %></p>
+```erb
 
-		    <a href="/book/beginning" data-pjax >Beginning</a>
-		    <a href="/book/middle" data-pjax >Middle</a>
-		    <a href="/book/end" data-pjax >End</a>
+<h2>
+	Cat In The Hat
+</h2>
+<p>
+	To show the page is not reloading: <%= Time.now %>
+</p>
 
-		    <div data-pjax-container >
-		        <%= yield %>
-		    </div>
+<a href="/book/beginning" data-pjax >Beginning</a>
+<a href="/book/middle" data-pjax >Middle</a>
+<a href="/book/end" data-pjax >End</a>
 
-		    <script type="text/javascript">
-		        $(document).pjax('a[data-pjax]', '[data-pjax-container]')
-		    </script>
+<div data-pjax-container >
+	<%= yield %>
+</div>
 
-		</body>
+<script type="text/javascript">
+	$(document).pjax('a[data-pjax]', '[data-pjax-container]')
+</script>
+
+
+	```
