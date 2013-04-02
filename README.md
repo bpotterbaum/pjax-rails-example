@@ -3,16 +3,8 @@ pjax-rails-example
 
 This is a simple, working implementation of Pjax on a vanilla rails app. Based off of Chris Wanstrath's [PJAX](https://github.com/defunkt/jquery-pjax)
 
-
-JS
-```erb
-<script type="text/javascript">
-	$(document).pjax('a[data-pjax]', '[data-pjax-container]')
-</script>
-```
-
 ERB
-```erb
+```html
 <h2>
 	Cat In The Hat
 </h2>
@@ -27,8 +19,36 @@ ERB
 <div data-pjax-container >
 	<%= yield %>
 </div>
+```
 
+JS
+```html
 <script type="text/javascript">
 	$(document).pjax('a[data-pjax]', '[data-pjax-container]')
 </script>
+```
+
+Ruby
+```ruby
+class BookController < ApplicationController
+
+  def beginning
+    if request.headers['X-PJAX']
+      render :layout => false
+    end
+  end
+
+  def middle
+    if request.headers['X-PJAX']
+      render :layout => false
+    end
+  end
+
+  def end
+    if request.headers['X-PJAX']
+      render :layout => false
+    end
+  end
+
+end
 ```
