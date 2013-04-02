@@ -5,14 +5,14 @@ This is a simple, working implementation of Pjax on a vanilla rails app. Based o
 
 
 JS
-```ruby
+```html
 <script type="text/javascript">
 	$(document).pjax('a[data-pjax]', '[data-pjax-container]')
 </script>
 ```
 
 ERB
-```ruby
+```html
 <h2>
 	Cat In The Hat
 </h2>
